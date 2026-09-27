@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trabajo verificable — desarrollo y automatización</title>
+<style>
+  :root{--bg:#0f1216;--card:#171b21;--line:#252b34;--fg:#e8ecf1;
+        --muted:#98a2b0;--accent:#3ddc97;--warn:#ffc857;--bad:#ff6b6b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+  header{padding:70px 0 44px;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(27px,4.5vw,40px);margin:0 0 14px;letter-spacing:-.02em}
+  .lead{color:var(--muted);font-size:18px;max-width:64ch;margin:0 0 26px}
+  .stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px}
+  .stat b{display:block;font-size:30px;color:var(--accent);
+           font-variant-numeric:tabular-nums;line-height:1.1}
+  .stat span{font-size:13px;color:var(--muted)}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 6px}
+  .note{color:var(--muted);margin:0 0 28px;max-width:70ch}
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px;
+        display:flex;flex-direction:column}
+  .card h3{margin:0 0 4px;font-size:18px}
+  .price{font-size:26px;font-weight:700;color:var(--accent);
+         font-variant-numeric:tabular-nums;margin-bottom:2px}
+  .para{color:var(--muted);font-size:14px;margin:0 0 16px}
+  dl{margin:0 0 16px;font-size:14px}
+  dl div{display:flex;justify-content:space-between;padding:5px 0;
+          border-bottom:1px solid var(--line)}
+  dt{color:var(--muted)} dd{margin:0;font-variant-numeric:tabular-nums}
+  .verif{font-size:13px;color:var(--muted);margin:0 0 16px}
+  .verif span{display:inline-block;background:rgba(61,220,151,.14);color:var(--accent);
+              border-radius:5px;padding:1px 7px;font-size:11px;
+              text-transform:uppercase;letter-spacing:.05em;margin-right:7px}
+  .dl{display:block;text-align:center;background:var(--accent);color:#06231a;
+      padding:10px;border-radius:9px;text-decoration:none;font-weight:650;font-size:14px;
+      margin-top:auto}
+  .dl:hover{filter:brightness(1.08)}
+  ul.tools{list-style:none;padding:0;margin:0}
+  ul.tools li{padding:13px 0;border-bottom:1px solid var(--line);
+              display:grid;gap:4px;grid-template-columns:auto 1fr auto;align-items:baseline}
+  code{background:var(--card);border:1px solid var(--line);border-radius:6px;
+       padding:2px 8px;font-size:13px}
+  .que{color:var(--muted);font-size:14px}
+  .ok{color:var(--accent);font-size:13px;white-space:nowrap}
+  ul.bugs{padding-left:20px;color:var(--muted);font-size:15px}
+  ul.bugs li{margin-bottom:8px}
+  .fuerte{color:var(--fg)}
+  footer{padding:36px 0;color:var(--muted);font-size:14px}
+  @media(max-width:640px){
+    ul.tools li{grid-template-columns:1fr;}
+    .stats{gap:18px}
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Trabajo que puedes abrir y comprobar</h1>
+  <p class="lead">No es una lista de habilidades. Cada entregable de aquí está
+     en disco, se ejecuta, y sus números se verifican.</p>
+  <div class="stats">
+    <div class="stat"><b>3</b><span>productos terminados</span></div>
+    <div class="stat"><b>91</b><span>fórmulas vivas</span></div>
+    <div class="stat"><b>19</b><span>tests en verde</span></div>
+    <div class="stat"><b>3</b><span>bugs encontrados y corregidos</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>Productos</h2>
+  <p class="note">Cada uno se genera con un script que <span class="fuerte">falla si el
+     cálculo no cuadra</span>. No se entrega un archivo sin verificar.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="price">$29</div>
+      <h3>Calculadora de Cotización MX</h3>
+      <p class="para">Freelancers y PYMEs en México</p>
+      <dl>
+        <div><dt>Contenido</dt><dd>3 archivos/hojas</dd></div>
+        <div><dt>Fórmulas vivas</dt><dd>20</dd></div>
+        <div><dt>Tamaño</dt><dd>8,099 bytes</dd></div>
+      </dl>
+      <p class="verif"><span>verificado</span> Recalculada: neto $9,052.00 correcto</p>
+      <a class="dl" href="../producto/calculadora-cotizacion-mx.xlsx" download>Descargar calculadora-cotizacion-mx.xlsx</a>
+    </article>
+
+    <article class="card">
+      <div class="price">$19</div>
+      <h3>Pack de Finanzas Freelancer</h3>
+      <p class="para">Freelancers que necesitan proyectar el año</p>
+      <dl>
+        <div><dt>Contenido</dt><dd>4 archivos/hojas</dd></div>
+        <div><dt>Fórmulas vivas</dt><dd>71</dd></div>
+        <div><dt>Tamaño</dt><dd>10,828 bytes</dd></div>
+      </dl>
+      <p class="verif"><span>verificado</span> Recalculado: punto de equilibrio $21,428.57</p>
+      <a class="dl" href="../producto/pack-finanzas-freelancer-mx.xlsx" download>Descargar pack-finanzas-freelancer-mx.xlsx</a>
+    </article>
+
+    <article class="card">
+      <div class="price">$149</div>
+      <h3>SaaS MX Starter (Next.js + Stripe + Auth)</h3>
+      <p class="para">Devs que quieren cobrar bien en México desde el día 1</p>
+      <dl>
+        <div><dt>Contenido</dt><dd>9 archivos/hojas</dd></div>
+        <div><dt>Fórmulas vivas</dt><dd>0</dd></div>
+        <div><dt>Tamaño</dt><dd>7,209 bytes</dd></div>
+      </dl>
+      <p class="verif"><span>verificado</span> 20/20 verificaciones de la lógica fiscal</p>
+      <a class="dl" href="../producto/saas-mx-starter.zip" download>Descargar saas-mx-starter.zip</a>
+    </article>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Herramientas</h2>
+  <p class="note">Resuelven problemas que me costaron tiempo. Las escribí porque
+     las necesitaba, no para llenar un portfolio.</p>
+  <ul class="tools">
+      <li>
+        <code>verify_bounty_pay.py</code>
+        <span class="que">Detecta en 30s si un bounty paga de verdad</span>
+        <span class="ok">4/4 correctos</span>
+      </li>
+
+      <li>
+        <code>leads_rss2.py</code>
+        <span class="que">Extrae clientes con presupuesto de RSS públicos sin KYC</span>
+        <span class="ok">3 leads reales encontrados</span>
+      </li>
+
+      <li>
+        <code>genera_*.py</code>
+        <span class="que">Construye productos con validación de recálculo</span>
+        <span class="ok">falla el script si el número no cuadra</span>
+      </li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Bugs que encontré en mi propio trabajo</h2>
+  <p class="note">Los tres habrían llegado al cliente si no hubiera ejecutado los
+     números en vez de asumir que estaban bien.</p>
+  <ul class="bugs">      <li>Fórmulas apuntando a celdas de texto → #VALOR! en Excel al abrir</li>
+      <li>División entre cero con precio $0 en la calculadora fiscal</li>
+      <li>precioParaRecibir(0) devolvía Infinity</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">
+  <p>Generado el 2026-09-27 desde los artefactos en disco.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+ "generado": "2026-09-27",
+ "productos": [
+  {
+   "nombre": "Calculadora de Cotización MX",
+   "archivo": "calculadora-cotizacion-mx.xlsx",
+   "precio": "$29",
+   "hojas": 3,
+   "formulas": 20,
+   "bytes": 8099,
+   "verif": "Recalculada: neto $9,052.00 correcto",
+   "para": "Freelancers y PYMEs en México"
+  },
+  {
+   "nombre": "Pack de Finanzas Freelancer",
+   "archivo": "pack-finanzas-freelancer-mx.xlsx",
+   "precio": "$19",
+   "hojas": 4,
+   "formulas": 71,
+   "bytes": 10828,
+   "verif": "Recalculado: punto de equilibrio $21,428.57",
+   "para": "Freelancers que necesitan proyectar el año"
+  },
+  {
+   "nombre": "SaaS MX Starter (Next.js + Stripe + Auth)",
+   "archivo": "saas-mx-starter.zip",
+   "precio": "$149",
+   "hojas": 9,
+   "formulas": 0,
+   "bytes": 7209,
+   "verif": "20/20 verificaciones de la lógica fiscal",
+   "para": "Devs que quieren cobrar bien en México desde el día 1"
+  }
+ ],
+ "tests_fisicos": {
+  "ok": 19,
+  "todos_pasan": true
+ },
+ "herramientas": [
+  {
+   "nombre": "verify_bounty_pay.py",
+   "que_hace": "Detecta en 30s si un bounty paga de verdad",
+   "casos_probados": "4/4 correctos"
+  },
+  {
+   "nombre": "leads_rss2.py",
+   "que_hace": "Extrae clientes con presupuesto de RSS públicos sin KYC",
+   "casos_probados": "3 leads reales encontrados"
+  },
+  {
+   "nombre": "genera_*.py",
+   "que_hace": "Construye productos con validación de recálculo",
+   "casos_probados": "falla el script si el número no cuadra"
+  }
+ ],
+ "bugs_encontrados": [
+  "Fórmulas apuntando a celdas de texto → #VALOR! en Excel al abrir",
+  "División entre cero con precio $0 en la calculadora fiscal",
+  "precioParaRecibir(0) devolvía Infinity"
+ ]
+}
