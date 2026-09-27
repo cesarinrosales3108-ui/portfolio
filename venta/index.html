@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadoras fiscales México — IVA, ISR y cotizaciones | Cesar Builds</title>
+<meta name="description" content="Hojas de cálculo para freelancers y agencias en México. IVA, ISR, precio real de cobro y finanzas del negocio. Sin suscripción, sin límite de uso.">
+<style>
+ :root{--bg:#0d1014;--card:#161a20;--line:#242b34;--fg:#e9edf2;--muted:#98a3b0;--acc:#3ddc97;--warn:#ffb454}
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+ .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+ header{padding:56px 0 34px;border-bottom:1px solid var(--line)}
+ .eyebrow{color:var(--acc);font-size:13px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px}
+ h1{font-size:clamp(27px,5vw,42px);line-height:1.15;margin:0 0 14px}
+ .sub{color:var(--muted);font-size:18px;max-width:62ch;margin:0}
+ h2{font-size:23px;margin:44px 0 8px}
+ .grid{display:grid;gap:18px;margin:26px 0}
+ @media(min-width:720px){.grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}}
+ .prod{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column}
+ .prod h3{margin:0 0 4px;font-size:19px}
+ .precio{font-size:32px;font-weight:700;color:var(--acc);margin:10px 0 4px;letter-spacing:-.02em}
+ .precio small{font-size:14px;color:var(--muted);font-weight:400;letter-spacing:0}
+ .desc{color:var(--muted);font-size:14.5px;flex:1;margin:8px 0 18px}
+ ul.pts{list-style:none;padding:0;margin:0 0 20px;font-size:14.5px}
+ ul.pts li{padding-left:20px;position:relative;margin-bottom:7px}
+ ul.pts li::before{content:"✓";position:absolute;left:0;color:var(--acc);font-weight:700}
+ .btn{display:inline-block;background:var(--acc);color:#06231a;padding:12px 22px;border-radius:9px;
+   text-decoration:none;font-weight:650;font-size:15px;border:0;cursor:pointer;text-align:center}
+ .btn.sec{background:transparent;color:var(--fg);border:1px solid var(--line)}
+ .nota{font-size:13px;color:var(--muted);margin-top:10px}
+ .box{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);
+   border-radius:10px;padding:20px 22px;margin:26px 0}
+ .box h3{margin:0 0 8px;font-size:17px}
+ .box p{margin:0;color:#c3ccd6;font-size:15px}
+ table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px}
+ th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line)}
+ th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+ code{background:#0a0d10;padding:2px 7px;border-radius:5px;font-size:14px;color:var(--acc)}
+ .verif{border-color:#2d4a3a}
+ footer{padding:40px 0 30px;border-top:1px solid var(--line);margin-top:46px;color:var(--muted);font-size:14px}
+ footer a{color:var(--fg)}
+ .gaps{margin:0 0 18px;padding:0;list-style:none;font-size:15px}
+ .gaps li{padding:12px 0;border-bottom:1px solid var(--line)}
+ .gaps b{color:var(--acc)}
+ .gaps .q{color:var(--muted);font-size:14px;display:block;margin-top:2px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="eyebrow">Freelancers y agencias en México</div>
+ <h1>Calcula lo que de verdad te llevas, no lo que crees</h1>
+ <p class="sub">
+  Hojas de cálculo con IVA, ISR y precio real de cobro ya resueltos.
+  Sin suscripción, sin límite de uso, y con las fórmulas a la vista para que
+  las revises tú mismo.
+ </p>
+</div></header>
+
+<div class="wrap">
+
+<h2>Los productos</h2>
+<div class="grid">
+
+  <div class="prod">
+    <h3>Calculadora de Cotización</h3>
+    <div class="precio">$29 <small>una vez</small></div>
+    <p class="desc">El error más caro de un freelancer en México: olvidar que el precio que pactaste no es lo que te llega.</p>
+    <ul class="pts">
+      <li>91 fórmulas vivas: precio de venta, IVA, retención de ISR, utilidad real</li>
+      <li>Calcula el precio <em>mínimo</em> para no trabajar a pérdida</li>
+      <li>Las celdas de ISR y IVA se pueden editar según tu régimen</li>
+    </ul>
+    <a class="btn" href="https://whop.com/checkout/plan_xf5vDIQIs1fX1" rel="noopener">Comprar</a>
+    <p class="nota">Archivo .xlsx · descarga inmediata</p>
+  </div>
+
+  <div class="prod">
+    <h3>Pack de Finanzas</h3>
+    <div class="precio">$19 <small>una vez</small></div>
+    <p class="desc">Para llevar el negocio de un freelance sin que un contador te cobre más que lo que ganas.</p>
+    <ul class="pts">
+      <li>Flujo de caja mensual</li>
+      <li>Punto de equilibrio: cuánto necesitas vender al mes</li>
+      <li>Presupuesto vs. real, para ver en qué te fuiste</li>
+      <li>Separación de impuestos para apartar desde el día uno</li>
+    </ul>
+    <a class="btn" href="https://whop.com/checkout/plan_jN4AlAKDNZU62" rel="noopener">Comprar</a>
+    <p class="nota">Dos archivos .xlsx · descarga inmediata</p>
+  </div>
+
+  <div class="prod">
+    <h3>SaaS MX Starter</h3>
+    <div class="precio">$149 <small>una vez</small></div>
+    <p class="desc">Base de código para alguien que va a cobrar en México y no quiere resolver el cálculo fiscal a mano.</p>
+    <ul class="pts">
+      <li>Next.js 14 + Stripe + Auth + Prisma</li>
+      <li><code>netoMexico()</code> y <code>precioParaRecibir()</code> ya implementados</li>
+      <li>20 pruebas en verde, no declaradas</li>
+      <li>Encontré y corregí 3 bugs antes de publicar; están documentados</li>
+    </ul>
+    <a class="btn" href="https://whop.com/checkout/plan_LaLMBd6m1sq1h" rel="noopener">Comprar</a>
+    <p class="nota">Archivo .zip · licencia de uso</p>
+  </div>
+
+</div>
+
+<div class="box">
+  <h3>Por qué son baratas y no gratis</h3>
+  <p>
+    Si la calculadora estuviera bien, no la necesitarías. Funciona porque las
+    fórmulas están a la vista, no escondidas. Y prefiero que sea barata a que
+    no la compres.
+  </p>
+</div>
+
+<h2>Lo que probablemente te preguntas</h2>
+<ul class="gaps">
+  <li><b>¿Necesito serfacturado para comprar?</b>
+    <span class="q">No. Es una compra normal. Pagas y descargas.</span></li>
+  <li><b>¿Sirve si no soy freelancer formal?</b>
+    <span class="q">Sí. Sirve para cotizar cualquier trabajo, y para separar lo que es gasto de lo que es inversión.</span></li>
+  <li><b>¿Está el ISR actualizado?</b>
+    <span class="q">Las tasas vienen en celdas editables. Si cambia la ley, cambias el número; no dependes de que yo lo actualice.</span></li>
+  <li><b>¿Y si ya uso algo similar?</b>
+    <span class="q">Las 91 fórmulas están a la vista. Ábrelas y decide tú.</span></li>
+  <li><b>¿Puedo revenderlo?</b>
+    <span class="q">No. Es para tu uso. Si lo quieres revender, escríbeme y vemos un acuerdo.</span></li>
+</ul>
+
+<h2>Cómo lo verifiqué</h2>
+<div class="box verif">
+  <h3>Las cifras del sitio</h3>
+  <p>
+    Este sitio no está claiming nada que no puedas comprobar. Los productos
+    tienen las fórmulas abiertas y las pruebas se ejecutan. El código del
+    <strong>SaaS MX Starter</strong> incluye sus propias pruebas: 20, todas en
+    verde, para que corras tú mismo <code>npm test</code> y veas el resultado.
+  </p>
+</div>
+
+<h2>Trabajo a medida</h2>
+<div class="box">
+  <h3>Si esto no resuelve tu caso</h3>
+  <p>
+    También hago desarrollo: agentes con Claude Code, integraciones,
+    automatizaciones y lógica de negocio. Si tienes un problema concreto y
+    quieres que lo revise, escríbeme contándome qué intentas hacer y qué te
+    está fallando.
+  </p>
+  <p style="margin-top:14px">
+    <a class="btn sec" href="mailto:cesarinrosales.3108@gmail.com?subject=Consulta%20sobre%20un%20proyecto">Escríbeme</a>
+  </p>
+</div>
+
+</div>
+
+<footer><div class="wrap">
+  <p>
+    Hecho en México. Los cálculos siguen las tasas vigentes al momento de
+    publicarse y las celdas son editables; no soy contador y esto no sustituye
+    asesoría fiscal.
+  </p>
+  <p style="margin-top:10px">
+    <a href="https://cesarinrosales3108-ui.github.io/portfolio/">Portfolio con el código y las pruebas</a>
+  </p>
+</div></footer>
+</body>
+</html>
