@@ -55,6 +55,11 @@
     ul.tools li{grid-template-columns:1fr;}
     .stats{gap:18px}
   }
+
+.contacto{background:var(--card,#171b21);border:1px solid var(--line,#252b34);border-radius:14px;padding:28px;margin:32px 0}
+.contacto h2{margin-top:0}
+.contacto .mail a{font-size:19px;font-weight:600}
+.contacto .nota{color:var(--muted,#98a2b0);font-size:14px;margin-bottom:0}
 </style>
 </head>
 <body>
@@ -68,7 +73,7 @@
     <div class="stat"><b>19</b><span>tests en verde</span></div>
     <div class="stat"><b>3</b><span>bugs encontrados y corregidos</span></div>
   </div>
-</div></header>
+</div><a class="btn" href="#contacto">Contactar</a></header>
 
 <section><div class="wrap">
   <h2>Productos</h2>
@@ -150,6 +155,19 @@
       <li>precioParaRecibir(0) devolvía Infinity</li>
   </ul>
 </div></section>
+
+
+<section id="contacto" class="wrap contacto">
+  <h2>Contacto</h2>
+  <p class="lede">
+    Si necesitas algo de esto —o quieres que lo construya para tu caso—
+    escríbeme. Respondo yo, sin plantillas.
+  </p>
+  <p class="mail">
+    <a href="mailto:cesarinrosales.3108@gmail.com?subject=Interes%20en%20tus%20productos">cesarinrosales.3108@gmail.com</a>
+  </p>
+  <p class="nota">Tambien en <a href="https://github.com/cesarinrosales3108-ui" target="_blank" rel="noopener">GitHub</a></p>
+</section>
 
 <footer><div class="wrap">
   <p>Generado el 2026-09-27 desde los artefactos en disco.</p>
